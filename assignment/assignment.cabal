@@ -1,0 +1,82 @@
+cabal-version: 3.0
+name:          assignment
+version:       0.1.0.0
+author:        schwarzer-swan
+maintainer:    schwarzer-swan@gmail.com
+build-type:    Simple
+synopsis:      plutus-contract
+description:   gimbalabs assignment
+homepage:      https://github.com/schwarzer-swan/pplb-1013
+
+source-repository head
+  type:     git
+  location: https://github.com/schwarzer-swan
+
+common project-config
+  default-language:   Haskell2010
+  default-extensions:
+    DeriveAnyClass
+    DeriveGeneric
+    DerivingStrategies
+    ExplicitForAll
+    FlexibleContexts
+    FlexibleInstances
+    GADTs
+    GeneralizedNewtypeDeriving
+    ImportQualifiedPost
+    InstanceSigs
+    MultiParamTypeClasses
+    NamedFieldPuns
+    OverloadedStrings
+    PatternSynonyms
+    ScopedTypeVariables
+    StandaloneDeriving
+    Strict
+    TemplateHaskell
+    TupleSections
+    TypeApplications
+    TypeFamilies
+
+common base
+  build-depends: base >=4.9 && <5
+  ghc-options:
+    -Wall -Wnoncanonical-monad-instances -Wincomplete-uni-patterns
+    -Wincomplete-record-updates -Wredundant-constraints -Widentities
+    -Wmissing-import-lists
+
+library
+  import:          base, project-config
+  exposed-modules:
+    AlwaysSucceeds.Compiler
+    AlwaysSucceeds.TypedValidator
+    AlwaysSucceeds.Validator
+
+  --                AlwaysSucceeds.TypedValidator
+  --                 , Tokens.Compiler
+  --                 , Tokens.Minter
+  --                 , PPBLNFT.Compiler
+  --                 , PPBLNFT.Minter
+  --                 , Lockbox.Compiler
+  --                 , Lockbox.Types
+  --                 , Lockbox.Validator
+  --                 , FaucetMiniProject.Validator
+  --                 , FaucetMiniProject.Types
+  --                 , FaucetMiniProject.Compiler
+
+  hs-source-dirs:  src
+  build-depends:
+    , aeson
+    , bytestring
+    , cardano-api
+    , containers
+    , data-default
+    , directory
+    , plutus-core
+    , plutus-ledger-api
+    , plutus-script-utils
+    , plutus-tx
+    , plutus-tx-plugin
+    , prettyprinter
+    , serialise
+    , tagged
+    , text
