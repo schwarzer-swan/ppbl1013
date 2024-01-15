@@ -19,7 +19,7 @@
     };
 
     CHaP = {
-      url = "github:input-output-hk/cardano-haskell-packages?ref=repo";
+      url = "github:intersectmbo/cardano-haskell-packages?ref=repo";
       flake = false;
     };
 
@@ -28,7 +28,7 @@
       inputs.hackage.follows = "hackage";
     };
     # Used to provide the cardano-node and cardano-cli executables.
-    cardano-node.url = "github:input-output-hk/cardano-node?ref=8.4.0-pre";
+    cardano-node.url = "github:intersectmbo/cardano-node?ref=8.7.2";
 
     mithril.url = "github:input-output-hk/mithril";
   };
