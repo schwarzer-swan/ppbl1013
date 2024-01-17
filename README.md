@@ -14,12 +14,18 @@ plutus contract development and testing
 
 ## How to use it
 - clone the repo
-
+- invoke the nix develop
+- build the project
+- execute the project
+- examine the text files in the output folder
 ``` sh
 nix develop
+rm -rf ./output
+mkdir ./output
 cabal update
-cabal build assignment
-cabal repl assignment
+cabal build all
+$(cabal exec -- which assignment)
+ll ./output/
 ```
 to run the cardano-node: 
 

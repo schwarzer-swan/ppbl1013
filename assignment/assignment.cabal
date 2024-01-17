@@ -80,3 +80,10 @@ library
     , serialise
     , tagged
     , text
+
+executable  assignment
+  import:          base, project-config
+  hs-source-dirs:  app
+  main-is:         Main.hs
+
+  build-depends: assignment
