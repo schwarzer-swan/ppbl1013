@@ -28,7 +28,7 @@ let
     inherit modules sha256map;
     src = ../.;
     name = "ppbl1013-assignment";
-    compiler-nix-name = "ghc928";
+    compiler-nix-name = "ghc96";
     inputMap = { "https://input-output-hk.github.io/cardano-haskell-packages" = inputs.CHaP; };
     shell.withHoogle = false;
   };
